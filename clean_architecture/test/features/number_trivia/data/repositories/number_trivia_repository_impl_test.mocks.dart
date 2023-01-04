@@ -5,7 +5,7 @@
 // ignore_for_file: no_leading_underscores_for_library_prefixes
 import 'dart:async' as _i4;
 
-import 'package:clean_architecture/core/platform/network_info.dart' as _i3;
+import 'package:clean_architecture/core/network/network_info.dart' as _i3;
 import 'package:clean_architecture/features/number_trivia/data/datasources/number_trivia_remote_data_source.dart'
     as _i5;
 import 'package:clean_architecture/features/number_trivia/data/models/number_trivia_model.dart'
@@ -44,11 +44,9 @@ class MockNetworkInfo extends _i1.Mock implements _i3.NetworkInfo {
 
   @override
   _i4.Future<bool> get isConnected => (super.noSuchMethod(
-      Invocation.getter(#isConnected),
-      returnValue: Future<bool>.value(false),
-      returnValueForMissingStub: Future<bool>.value(true)) as _i4.Future<bool>);
-  @override
-  String toString() => super.toString();
+        Invocation.getter(#isConnected),
+        returnValue: _i4.Future<bool>.value(false),
+      ) as _i4.Future<bool>);
 }
 
 /// A class which mocks [NumberTriviaRemoteDataSource].
